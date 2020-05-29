@@ -61,7 +61,7 @@
 		.email{background-color: #17F6BD;}
 		.twitter{background-color: #10B9FE;}
 		.instagram{background-color: #8E8BFF;}
-		
+
 		i{
 			color: white;
 			font-size: 1.4em;
@@ -103,8 +103,10 @@
 /*--------------------*/
 
 
-@media(max-width:1199px ){
-  
+@media(max-width:1280px){
+	nav{height: 44vh;}
+	.Texts{padding: 15px;}
+	.Texts a{ margin: 0 12% 0 12%;};
 }
 
 
@@ -121,7 +123,7 @@
 		}
 
 
-@media(max-width:767px ){
+		@media (min-width: 501px) and (max-width: 767px) { 
 	nav{height: 30vh;}
 	.logo{width: 10%;}
 	.nav-icon{width: 8%;}
@@ -135,12 +137,20 @@
 
 
 @media(max-width:480px ){
+	nav{height: 25vh;}
+	.logo{width: 10%;}
+	.nav-icon{width: 8%;}
+	.close-icon{width: 5%; left: 25px;}
+	.email, .twitter, .instagram{top: -90px; right:36px; width: 14%; height: 3vh}
+	i{font-size: 0.8em; margin: 7px 0 0 25px;}
+	.Texts{padding: 3px;}
 	.icons-inside{width: 4%; top: 3px;}
+	.Texts a{margin: 0 6% 0 6%;};
+
 }
 
 
 @media(max-width:360px ){
-
 }
 
 
@@ -189,49 +199,43 @@
 	</nav>
 
 	<script>
-		function mediaquery(a, b, c, d, e, f) {
-
-		 document.getElementById('MyTexts').style.display = "block";
-
-		if (a.matches) { //1199px screen
-			document.getElementById('MyNavBar').style.width = "100%";
-			document.getElementById('MyNavBar').style.height = "5vh";
-}else if(b.matches){ //991px screen
-	document.getElementById('MyNavBar').style.width = "100%";
-	document.getElementById('MyNavBar').style.height = "5vh";
-}else if(c.matches){ //767px screen
-	document.getElementById('MyNavBar').style.width = "100%";
-	document.getElementById('MyNavBar').style.height = "5vh";
-}else if(d.matches){ //480px screen
-	document.getElementById('MyNavBar').style.width = "100%";
-	document.getElementById('MyNavBar').style.height = "5vh";
-}else if(e.matches){ //360px screen
-	document.getElementById('MyNavBar').style.width = "100%";
-	document.getElementById('MyNavBar').style.height = "5vh";
-}else if(f.matches){ //320px screen
-	document.getElementById('MyNavBar').style.width = "100%";
-	document.getElementById('MyNavBar').style.height = "5vh";
-}else{
-	document.getElementById('MyNavBar').style.width = "100%";
-	document.getElementById('MyNavBar').style.height = "7vh";
-		}
-}
 		function OpenNav(){
 			open = document.getElementById('MyNavIcon');
 			open.style.display="none";
 			close = document.getElementById('MyCloseIcon');
 			close.style.display="inline-block";
-			
+
 			// MEDIA
-			var a = window.matchMedia("(max-width: 1199px)");
-   			var b = window.matchMedia("(max-width: 991px)");
-    		var c = window.matchMedia("(max-width: 767px)");
-    		var d = window.matchMedia("(max-width: 480px)");
-    		var e = window.matchMedia("(max-width: 360px)");
-    		var f = window.matchMedia("(max-width: 320px)");
-    		mediaquery(a, b, c, d, e, f);
-    		[a, b, c, d, e, f].forEach(addListener(mediaquery));
-			
+			  const a = window.matchMedia("(max-width: 1280px)");
+   			const b = window.matchMedia("(max-width: 991px)");
+    		const c = window.matchMedia("(max-width: 767px)");
+    		const d = window.matchMedia("(max-width: 480px)");
+    		const e = window.matchMedia("(max-width: 360px)");
+    		const f = window.matchMedia("(max-width: 320px)");
+    		if (a.matches) {
+					document.getElementById('MyNavBar').style.width = "100%";
+					document.getElementById('MyNavBar').style.height = "4vh";
+    		} else if (b.matches) {
+					document.getElementById('MyNavBar').style.width = "100%";
+					document.getElementById('MyNavBar').style.height = "1vh";
+    		} else if (c.matches) {
+					document.getElementById('MyNavBar').style.width = "100%";
+					document.getElementById('MyNavBar').style.height = "7vh";
+    		} else if(d.matches){
+					document.getElementById('MyNavBar').style.width = "100%";
+					document.getElementById('MyNavBar').style.height = "7vh";
+				} else if (e.matches) {
+					document.getElementById('MyNavBar').style.width = "100%";
+					document.getElementById('MyNavBar').style.height = "7vh";
+				} else if(f.matches){
+					document.getElementById('MyNavBar').style.width = "100%";
+					document.getElementById('MyNavBar').style.height = "7vh";
+				}else{
+					document.getElementById('MyNavBar').style.width = "100%";
+					document.getElementById('MyNavBar').style.height = "7vh";
+				}
+
+				document.getElementById('MyTexts').style.display = "block";
 		}
 
 		function CloseNav(){
