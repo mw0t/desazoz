@@ -1,8 +1,167 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<script src="https://kit.fontawesome.com/bcf907d297.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Exo" rel="stylesheet">
+	<meta name=”viewport” content="width=device-width, initial-scale=1.0">
+	<title>DesAzoz Website</title>
+	<style>
+		body{
+			background-color: #071B24;
+			padding: 0;
+			margin: 0;
+		}
+		nav{
+			background-color: #103548;
+			width: 100%;
+			height: auto;
+		}
+
+		/* LOGO */
+		.logo{
+			cursor: pointer;
+			width: 50px;
+			height: 50px;
+			margin: auto;
+			display: block;
+		}
+
+		/* NAV */
+		.nav-icon{
+			display: inline-block;
+			cursor: pointer;
+  			width: 20px;
+				height: 20px;
+  			position: relative;
+  			top: 20px;
+  			left: 20px;
+		}
+
+		.close-icon{
+			display: none;
+			cursor: pointer;
+			width: 20px;
+			height: 20px;
+  			position: relative;
+				top: 20px;
+				left: 20px;
+		}
+
+
+		/* SOCIAL MEDIA */
+		.email, .twitter, .instagram{
+			cursor: pointer;
+			width: 35px;
+			height: 20px;
+			margin-left: auto;
+			 margin-top: 20px;
+			 position: relative;
+			 top: -80px;
+			border-radius: 20px 0px 0px 20px;
+		}
+
+		.email{background-color: #17F6BD;}
+		.twitter{background-color: #10B9FE;}
+		.instagram{background-color: #8E8BFF;}
+
+		i{
+			color: white;
+			font-size: 0.7em;
+			margin: 5px auto auto 15px;
+		}
+
+		/* Nav Bar */
+		.NavBar{
+		width: 100%;
+    height: 0;
+    background-color: #103548;
+    overflow: hidden;
+    transition: all 0.7s;
+		}
+
+
+		.Texts div{
+			cursor: pointer;
+			font-family: "Exo";
+			font-weight: 600;
+			width: 33.33%;
+			font-size: 0.45em;
+    background: none;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    justify: center;
+    line-height: 25px;
+		}
+
+		.icons-inside{
+			width: 11px;
+			height: 11px;
+			margin: 0 5px -3px; 0
+	 }
+
+	</style>
 </head>
 <body>
-<p>HELLO WORLD!</p>
+	<nav>
+		<svg onclick="OpenNav()" class="nav-icon" id="MyNavIcon" data-name="MyNavIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118.16 68.22"><defs><style>.nv-1,.nv-2,.nv-3{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:10.18px;}.nv-1{stroke:#18f8bf;}.nv-2{stroke:#11baff;}.nv-3{stroke:#8e8bff;}</style></defs><g id="document"><path class="nv-1" d="M115,93.13H223" transform="translate(-109.94 -88.04)"/><path class="nv-2" d="M115,122.47H223" transform="translate(-109.94 -88.04)"/><path class="nv-3" d="M115,151.17H223" transform="translate(-109.94 -88.04)"/></g></svg>
+
+		<svg onclick="CloseNav()" class="close-icon" id="MyCloseIcon" data-name="MyCloseIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.14 70.14"><defs><style>.mcs-1,.mcs-2{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:10.18px;}.mcs-1{stroke:#8e8bff;}.mcs-2{stroke:#18f8bf;}</style></defs><g id="document"><path class="mcs-1" d="M197.39,151.85l-59.95-60" transform="translate(-132.35 -86.8)"/><path class="mcs-2" d="M137.44,151.85l59.95-60" transform="translate(-132.35 -86.8)"/></g></svg>
+
+
+		<!-- THE LOGO STARTS HERE !-->
+<svg class="logo" id="My-Logo" data-name="My-Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 534.82 1173.23"><defs><style>.lg-1{fill:#18f8bf;}.lg-2{fill-opacity:0.1;}.lg-3{fill:#11baff;}.lg-4{fill:#169dd3;fill-opacity:0.48;}.lg-5{fill:#8e8bff;}.lg-6{fill:#020101;fill-opacity:0.14;}</style></defs><g id="document"><path class="lg-1" d="M1060,737.74c53.51-87.53,46.84-143,36-182.12a478.65,478.65,0,0,0-26.66-71.92s-6.41,54-29.44,90.12c-38.65,60.61-245.84,322.71-262,375.36-37.65,122.37-2.9,154.15,8.62,212,0,0,7.9-70,44.11-134.71S1035.39,780.65,1060,737.74Z" transform="translate(-760.83 -483.7)"/><path class="lg-2" d="M1008.75,728.6c53.51-87.53,56.19-121.9,66.71-164.39s-6.09-80.51-6.09-80.51-6.41,54-29.44,90.12c-38.65,60.61-245.84,322.71-262,375.36-37.65,122.37-2.9,154.15,8.62,212,0,0-6.76-103.76,29.45-168.48S984.14,771.51,1008.75,728.6Z" transform="translate(-760.83 -483.7)"/><path class="lg-3" d="M1130.81,959c86.63-120.92,90.36-213,74.87-269.09a686.46,686.46,0,0,0-38.21-103.1s-6.35,80.64-39.36,132.4c-55.42,86.88-246.72,307.65-284,386.93-78.12,166.09,12,273.44,28.48,356.38,0,0-7.65-156,44.26-248.78S1095.53,1020.55,1130.81,959Z" transform="translate(-760.83 -483.7)"/><path class="lg-4" d="M867.82,1193.83c264.81-354.1,263.86-295.64,307.27-467.29,14.26-56.37-7.62-139.69-7.62-139.69s-6.35,80.64-39.36,132.4c-55.42,86.88-246.72,307.65-284,386.93-78.12,166.09,12,273.44,28.48,356.38C872.58,1462.56,815.9,1286.62,867.82,1193.83Z" transform="translate(-760.83 -483.7)"/><path class="lg-5" d="M1087.18,1215.7c44.19-59.08,109.1-99,152.14-141.87,60.23-60,56.68-146.86,56.09-176-1-49.59-35.75-137.26-35.75-137.26s-36.88,150.56-62.42,192c-93.16,151.21-199,169.93-251.93,305.55s-22.82,209.3,5.57,267.74,98.73,137.55,105.92,130.59c4.69-4.53-50.59-101-37.7-180.71,10.27-50.17,13.41-64.32,24.62-91.64,4.39-10.69,14.23-39.41,29.91-67.57s30.37-43.37,29.27-42.78c-87.35,47-126.64,168.35-125.3,153.56S1026.41,1267.35,1087.18,1215.7Z" transform="translate(-760.83 -483.7)"/><path class="lg-6" d="M1021.78,1215.43c44.19-59.08,129.62-110.72,172.66-153.62,60.24-60,76.93-138.07,76.34-167.18-1-49.58-11.12-134-11.12-134s-36.88,150.56-62.42,192c-93.16,151.21-199,169.93-251.93,305.55s-22.82,209.3,5.57,267.74,98.38,137.53,105.57,130.57c-25.2-79-60.67-91.6-85.62-183.85S980.68,1250.35,1021.78,1215.43Z" transform="translate(-760.83 -483.7)"/></g></svg>
+		<!-- THE LOGO ENDS HERE !-->
+
+		<!-- THE SOCIAL MEDIA !-->
+		<div onclick="window.open('https://www.instagram.com/l04t/', '_blank')" class="email">
+			<i class="far fa-envelope"></i>
+		</div>
+
+		<div onclick="window.open('https://twitter.com/desazoz', '_blank')" class="twitter">
+			<i class="fab fa-twitter"></i>
+		</div>
+
+		<div onclick="window.open('https://www.instagram.com/l04t/', '_blank')" class="instagram">
+		<i class="fab fa-instagram"></i>
+		</div>
+		<!-- THE SOCIAL MEDIA ENDS HERE !-->
+
+		<div class="NavBar" id="MyNavBar">
+			<div class="Texts" id="MyTexts">
+				<div href="#" style="background-color: #17F6BD">
+					<svg class="icons-inside" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.96 59.96"><defs><style>.cls-1{fill:#103548;}</style></defs><g id="document"><path class="cls-1" d="M185.85,572.57l-8.41-8.41A.47.47,0,0,0,177,564a.44.44,0,0,0-.35.27l-1.15,2.36,7.88,7.88,2.35-1.15a.47.47,0,0,0,.12-.79ZM174,568l-7.74.65a2.51,2.51,0,0,0-.67.2.88.88,0,0,0-.41.65h0a39.29,39.29,0,0,1-2.33,7.38c-1,2.4-2.07,4.52-3.1,6.39s-1.93,3.35-2.69,4.47l-1.15,1.7,1.68,1.68,8-8a3.47,3.47,0,0,1-.19-.57,2.77,2.77,0,0,1,.75-2.64,2.83,2.83,0,1,1,2,4.83,2.74,2.74,0,0,1-.64-.08,3.47,3.47,0,0,1-.57-.19l-8,8,1.68,1.68,1.7-1.15q1.68-1.14,4.47-2.69c1.87-1,4-2.06,6.39-3.1a39.29,39.29,0,0,1,7.38-2.33h0a.88.88,0,0,0,.65-.41,2.51,2.51,0,0,0,.2-.67l.65-7.74Z" transform="translate(-139.8 -549.57)"/><path class="cls-1" d="M169.78,549.57a30,30,0,1,0,30,30A30,30,0,0,0,169.78,549.57ZM185.25,601c-13.89,10-27.37,2.63-31.14,0a27,27,0,0,1-10.65-21.41,26.38,26.38,0,0,1,52.76,0A26.67,26.67,0,0,1,185.25,601Z" transform="translate(-139.8 -549.57)"/></g></svg>
+				My DESIGNS</div>
+				<div href="#"  style="background-color: #10B9FE">
+					<svg class="icons-inside" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.96 59.96"><defs><style>.cls-1{fill:#103548;}</style></defs><g id="document"><path class="cls-1" d="M901.59,547.44a30,30,0,1,0,30,30A30,30,0,0,0,901.59,547.44Zm15.47,51.38c-4.37-1.07-7.55-2-8.27-3.41-1.14-2.4-1.2-4.8,0-8.4.18-.6,1.2,0,1.92-5.21,0,0,1.62.36,2.22-1.68s1.86-6.66,0-6.66c0,0,2.34-7.79-1.14-12.77s-10.2-4.86-10.2-4.86-6.59-.12-10.13,4.86-1.14,12.77-1.14,12.77c-1.86,0-.6,4.62,0,6.66s2.22,1.68,2.22,1.68c.72,5.21,1.74,4.61,1.92,5.21,1.2,3.6,1.14,6,0,8.4-.72,1.5-4.08,2.1-8.63,3.12A26.38,26.38,0,1,1,928,577.42,26.62,26.62,0,0,1,917.06,598.82Z" transform="translate(-871.61 -547.44)"/></g></svg>
+				ABOUT ME</div>
+				<div href="#"  style="background-color: #8E8BFF">
+					<svg class="icons-inside" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.96 59.96"><defs><style>.cls-1{fill:#103548;}</style></defs><g id="document"><path class="cls-1" d="M1602.6,549.57a30,30,0,1,0,30,30A30,30,0,0,0,1602.6,549.57ZM1618.07,601c-13.89,10-27.37,2.63-31.14,0a27,27,0,0,1-10.65-21.41,26.38,26.38,0,1,1,52.76,0A26.67,26.67,0,0,1,1618.07,601Z" transform="translate(-1572.62 -549.57)"/><path class="cls-1" d="M1598.85,590.15a2.29,2.29,0,0,1-2.32,2.32,2.3,2.3,0,0,1-2.33-2.32,2.32,2.32,0,0,1,2.33-2.33,2.3,2.3,0,0,1,2.32,2.33Zm15.53,0a2.3,2.3,0,0,1-2.33,2.32,2.3,2.3,0,0,1-2.33-2.32,2.32,2.32,0,0,1,2.33-2.33,2.32,2.32,0,0,1,2.33,2.33Zm0-10.1v-9.32h-18.63a1.54,1.54,0,0,0-1.55-1.55h-4.66v1.55h3.1l1.17,10a3.18,3.18,0,0,0-.85,1.07,3.1,3.1,0,0,0,2.79,4.46h18.63v-1.55h-18.63a1.51,1.51,0,0,1-1.11-.45,1.53,1.53,0,0,1-.44-1.1h0v0Z" transform="translate(-1572.62 -549.57)"/></g></svg>
+				Store AZOZ</div>
+			</div>
+		</div>
+	</nav>
+
+	<script>
+		function OpenNav(){
+			open = document.getElementById('MyNavIcon');
+			open.style.display="none";
+			close = document.getElementById('MyCloseIcon');
+			close.style.display="inline-block";
+
+			// MEDIA
+
+			document.getElementById('MyNavBar').style.height = "25px";
+		}
+
+		function CloseNav(){
+			open = document.getElementById('MyNavIcon');
+			open.style.display="inline-block";
+			close = document.getElementById('MyCloseIcon');
+			close.style.display="none";
+			document.getElementById('MyNavBar').style.height = "0";
+		}
+	</script>
 </body>
 </html>
