@@ -15,13 +15,14 @@
 		nav{
 			background-color: #103548;
 			width: 100%;
-			height: 50vh;
+			height: auto;
 		}
 
 		/* LOGO */
 		.logo{
 			cursor: pointer;
-			width: 5%;
+			width: 100px;
+			height: 100px;
 			margin: auto;
 			display: block;
 		}
@@ -30,7 +31,8 @@
 		.nav-icon{
 			display: inline-block;
 			cursor: pointer;
-  			width: 4%;
+  			width: 40px;
+				height: 40px;
   			position: relative;
   			top: 20px;
   			left: 20px;
@@ -39,23 +41,24 @@
 		.close-icon{
 			display: none;
 			cursor: pointer;
-  			width: 2.3%;
+			width: 40px;
+			height: 40px;
   			position: relative;
   			top: 15px;
-  			left: 30px;
+  			left: 20px;
 		}
 
 
 		/* SOCIAL MEDIA */
 		.email, .twitter, .instagram{
 			cursor: pointer;
-			width: 5%;
-			height: 5.5vh;
-	 		margin: 20px 0 0 95%;
+			width: 70px;
+			height: 40px;
+			margin-left: auto;
+			 margin-top: 20px;
+			 position: relative;
+			 top: -100px;
 			border-radius: 20px 0px 0px 20px;
-  		    position: relative;
-  		    top: -170px;
-
 		}
 
 		.email{background-color: #17F6BD;}
@@ -70,92 +73,33 @@
 
 		/* Nav Bar */
 		.NavBar{
-			width: 0;
-			height: 0;
-			background: linear-gradient(to right,  #17F6BD, #17F6BD 33.33%, #10B9FE 33.33%, #10B9FE 66.66%, #8E8BFF 66.66%);
-			position: relative;
-			top: -68px;
-			transition: height 0.5s;
-		}
-		.Texts{
-			display: none;
-			text-align: center;
-			padding: 10px;
+		width: 100%;
+    height: 0;
+    background-color: #103548;
+    overflow: hidden;
+    transition: all 0.7s;
 		}
 
-		.Texts a{
+
+		.Texts div{
+			cursor: pointer;
 			font-family: "Exo";
 			font-weight: 600;
-			color: #103548;
-			text-decoration: none;
-			margin: 0 12% 0 12%;
+			width: 33.33%;
+    background: none;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    justify: center;
+    line-height: 50px;
 		}
 
 		.icons-inside{
-			width: 1.5%;
-			position: relative;
-			top: 5px;
-			margin: 0 5px 0 0;
-		}
+			width: 22px;
+			height: 22px;
+			margin: 0 5px -4px; 0
+	 }
 
-/*--------------------*/
-/* RESPONSIVE STYLE */
-/*--------------------*/
-
-
-@media(max-width:1280px){
-	nav{height: 44vh;}
-	.Texts{padding: 15px;}
-	.Texts a{ margin: 0 12% 0 12%;};
-}
-
-
-@media(max-width:991px ){
-	nav{height: 30vh;}
-	.logo{width: 10%;}
-	.nav-icon{width: 8%;}
-	.close-icon{width: 5%; left: 25px;}
-	.email, .twitter, .instagram{top: -90px; right:36px; width: 10%; height: 3.5vh}
-	i{font-size: 0.8em; margin: 5px 0 0 22px;}
-	.Texts{padding: 5px;}
-	.Texts a{font-size: 0.6em; margin: 0 4% 0 4%;};
-			.icons-inside{width: 4%; top: 3px;}
-		}
-
-
-		@media (min-width: 501px) and (max-width: 767px) { 
-	nav{height: 30vh;}
-	.logo{width: 10%;}
-	.nav-icon{width: 8%;}
-	.close-icon{width: 5%; left: 25px;}
-	.email, .twitter, .instagram{top: -90px; right:36px; width: 15%; height: 3.5vh}
-	i{font-size: 0.8em; margin: 5px 0 0 22px;}
-	.Texts{padding: 5px;}
-	.Texts a{font-size: 0.6em; margin: 0 5.5% 0 5.5%;};
-	.icons-inside{width: 4%; top: 3px;}
-}
-
-
-@media(max-width:480px ){
-	nav{height: 25vh;}
-	.logo{width: 10%;}
-	.nav-icon{width: 8%;}
-	.close-icon{width: 5%; left: 25px;}
-	.email, .twitter, .instagram{top: -90px; right:36px; width: 14%; height: 3vh}
-	i{font-size: 0.8em; margin: 7px 0 0 25px;}
-	.Texts{padding: 3px;}
-	.icons-inside{width: 4%; top: 3px;}
-	.Texts a{margin: 0 6% 0 6%;};
-
-}
-
-
-@media(max-width:360px ){
-}
-
-
-@media(max-width:320px ){
-}
 	</style>
 </head>
 <body>
@@ -185,15 +129,15 @@
 
 		<div class="NavBar" id="MyNavBar">
 			<div class="Texts" id="MyTexts">
-				<a href="#">
+				<div href="#" style="background-color: #17F6BD">
 					<svg class="icons-inside" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.96 59.96"><defs><style>.cls-1{fill:#103548;}</style></defs><g id="document"><path class="cls-1" d="M185.85,572.57l-8.41-8.41A.47.47,0,0,0,177,564a.44.44,0,0,0-.35.27l-1.15,2.36,7.88,7.88,2.35-1.15a.47.47,0,0,0,.12-.79ZM174,568l-7.74.65a2.51,2.51,0,0,0-.67.2.88.88,0,0,0-.41.65h0a39.29,39.29,0,0,1-2.33,7.38c-1,2.4-2.07,4.52-3.1,6.39s-1.93,3.35-2.69,4.47l-1.15,1.7,1.68,1.68,8-8a3.47,3.47,0,0,1-.19-.57,2.77,2.77,0,0,1,.75-2.64,2.83,2.83,0,1,1,2,4.83,2.74,2.74,0,0,1-.64-.08,3.47,3.47,0,0,1-.57-.19l-8,8,1.68,1.68,1.7-1.15q1.68-1.14,4.47-2.69c1.87-1,4-2.06,6.39-3.1a39.29,39.29,0,0,1,7.38-2.33h0a.88.88,0,0,0,.65-.41,2.51,2.51,0,0,0,.2-.67l.65-7.74Z" transform="translate(-139.8 -549.57)"/><path class="cls-1" d="M169.78,549.57a30,30,0,1,0,30,30A30,30,0,0,0,169.78,549.57ZM185.25,601c-13.89,10-27.37,2.63-31.14,0a27,27,0,0,1-10.65-21.41,26.38,26.38,0,0,1,52.76,0A26.67,26.67,0,0,1,185.25,601Z" transform="translate(-139.8 -549.57)"/></g></svg>
-				My DESIGNS</a>
-				<a href="#">
+				My DESIGNS</div>
+				<div href="#"  style="background-color: #10B9FE">
 					<svg class="icons-inside" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.96 59.96"><defs><style>.cls-1{fill:#103548;}</style></defs><g id="document"><path class="cls-1" d="M901.59,547.44a30,30,0,1,0,30,30A30,30,0,0,0,901.59,547.44Zm15.47,51.38c-4.37-1.07-7.55-2-8.27-3.41-1.14-2.4-1.2-4.8,0-8.4.18-.6,1.2,0,1.92-5.21,0,0,1.62.36,2.22-1.68s1.86-6.66,0-6.66c0,0,2.34-7.79-1.14-12.77s-10.2-4.86-10.2-4.86-6.59-.12-10.13,4.86-1.14,12.77-1.14,12.77c-1.86,0-.6,4.62,0,6.66s2.22,1.68,2.22,1.68c.72,5.21,1.74,4.61,1.92,5.21,1.2,3.6,1.14,6,0,8.4-.72,1.5-4.08,2.1-8.63,3.12A26.38,26.38,0,1,1,928,577.42,26.62,26.62,0,0,1,917.06,598.82Z" transform="translate(-871.61 -547.44)"/></g></svg>
-				ABOUT ME</a>
-				<a href="#">
+				ABOUT ME</div>
+				<div href="#"  style="background-color: #8E8BFF">
 					<svg class="icons-inside" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.96 59.96"><defs><style>.cls-1{fill:#103548;}</style></defs><g id="document"><path class="cls-1" d="M1602.6,549.57a30,30,0,1,0,30,30A30,30,0,0,0,1602.6,549.57ZM1618.07,601c-13.89,10-27.37,2.63-31.14,0a27,27,0,0,1-10.65-21.41,26.38,26.38,0,1,1,52.76,0A26.67,26.67,0,0,1,1618.07,601Z" transform="translate(-1572.62 -549.57)"/><path class="cls-1" d="M1598.85,590.15a2.29,2.29,0,0,1-2.32,2.32,2.3,2.3,0,0,1-2.33-2.32,2.32,2.32,0,0,1,2.33-2.33,2.3,2.3,0,0,1,2.32,2.33Zm15.53,0a2.3,2.3,0,0,1-2.33,2.32,2.3,2.3,0,0,1-2.33-2.32,2.32,2.32,0,0,1,2.33-2.33,2.32,2.32,0,0,1,2.33,2.33Zm0-10.1v-9.32h-18.63a1.54,1.54,0,0,0-1.55-1.55h-4.66v1.55h3.1l1.17,10a3.18,3.18,0,0,0-.85,1.07,3.1,3.1,0,0,0,2.79,4.46h18.63v-1.55h-18.63a1.51,1.51,0,0,1-1.11-.45,1.53,1.53,0,0,1-.44-1.1h0v0Z" transform="translate(-1572.62 -549.57)"/></g></svg>
-				Store AZOZ</a>
+				Store AZOZ</div>
 			</div>
 		</div>
 	</nav>
@@ -206,36 +150,8 @@
 			close.style.display="inline-block";
 
 			// MEDIA
-			  const a = window.matchMedia("(max-width: 1280px)");
-   			const b = window.matchMedia("(max-width: 991px)");
-    		const c = window.matchMedia("(max-width: 767px)");
-    		const d = window.matchMedia("(max-width: 480px)");
-    		const e = window.matchMedia("(max-width: 360px)");
-    		const f = window.matchMedia("(max-width: 320px)");
-    		if (a.matches) {
-					document.getElementById('MyNavBar').style.width = "100%";
-					document.getElementById('MyNavBar').style.height = "4vh";
-    		} else if (b.matches) {
-					document.getElementById('MyNavBar').style.width = "100%";
-					document.getElementById('MyNavBar').style.height = "1vh";
-    		} else if (c.matches) {
-					document.getElementById('MyNavBar').style.width = "100%";
-					document.getElementById('MyNavBar').style.height = "7vh";
-    		} else if(d.matches){
-					document.getElementById('MyNavBar').style.width = "100%";
-					document.getElementById('MyNavBar').style.height = "7vh";
-				} else if (e.matches) {
-					document.getElementById('MyNavBar').style.width = "100%";
-					document.getElementById('MyNavBar').style.height = "7vh";
-				} else if(f.matches){
-					document.getElementById('MyNavBar').style.width = "100%";
-					document.getElementById('MyNavBar').style.height = "7vh";
-				}else{
-					document.getElementById('MyNavBar').style.width = "100%";
-					document.getElementById('MyNavBar').style.height = "7vh";
-				}
 
-				document.getElementById('MyTexts').style.display = "block";
+			document.getElementById('MyNavBar').style.height = "50px";
 		}
 
 		function CloseNav(){
@@ -243,9 +159,7 @@
 			open.style.display="inline-block";
 			close = document.getElementById('MyCloseIcon');
 			close.style.display="none";
-			document.getElementById('MyNavBar').style.width = "0%";
-			document.getElementById('MyNavBar').style.height = "0vh";
-		    document.getElementById('MyTexts').style.display = "none";
+			document.getElementById('MyNavBar').style.height = "0";
 		}
 	</script>
 </body>
