@@ -4,16 +4,33 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-		
+		<link rel="stylesheet" href="css/style.css">
+
 		<!-- Bootstrap CDN-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script>
+		$(document).ready(function() {
+  $("#success-alert").hide();
+});
+		function alertsuccess() {
+			event.preventDefault();
+			window.setTimeout(function() {
+					$(".alert").fadeTo(1000, 500).slideUp(500, function() {
+      $("#success-alert").slideUp(500);
+					});
+			}, 500);
 
+window.setTimeout(function() {
+window.location.href = 'index.html';
+}, 2000);
+}
+		</script>
 		<title>Log In</title>
 	</head>
 <body>
-	<form action="index.html">
+	<form onsubmit="alertsuccess()" id="formlogin">
 	<div class="Login">
 		<h2>Log In</h2>
 		<div class="form-group">
@@ -25,6 +42,10 @@
 			<input type="password" class="form-control" id="pwd" placeholder="here is your password" name="pwd" required>
 		</div>
 		<button type="submit" class="btn btn-default">Submit</button>
+		<div class="alert alert-success" role="alert"  id="success-alert">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  <strong>Success!</strong> You have been logged in successfully!
+	</div>
 	</div>
 </div>
 </form>
