@@ -1,0 +1,38 @@
+.body{
+  background-color: white;
+}
+
+.col{
+  padding: 5px;
+  text-align: left;
+  color: white;
+  border: solid 1px #fffff;
+  cursor: pointer;
+  background-color: #212121;
+}
+
+.col-md{
+  padding: 5px;
+  text-align: left;
+  color: white;
+  border: solid 1px #fffff;
+}
+
+.thumbnail{
+  margin: 1%;
+  border: solid 1px #212121;
+}
+
+.col-md:hover{
+
+  opacity: 0.3;
+}
+
+#formlogin{
+  background-image: url(../../img/black.jpg);
+}
+
+
+#panel1, #panel2, #panel3, #panel4, #panel5, #panel6, #panel7, #panel8, #panel9, #panel10, #panel11, #panel12{
+  display: none;
+}
