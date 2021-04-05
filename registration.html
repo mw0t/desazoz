@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-		
+
 		<!-- Bootstrap CDN-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,20 +12,46 @@
 
 		<script>
 			function matchPassword(){
+
+		}
+		$(document).ready(function() {
+	$("#success-alert").hide();
+	$("#danger-alert").hide();
+});
+
+function alertdanger(){
+	window.setTimeout(function() {
+			$("#danger-alert").fadeTo(1000, 500).slideUp(500, function() {
+	$("#danger-alert").slideUp(500);
+			});
+	}, 500);
+}
+		function alertsuccess() {
+			event.preventDefault();
+			if(!document.getElementById('checkterm').checked) { alert('Please agree to the Terms and Conditions.');return false; }
 			var pw1 = document.getElementById("pwd").value
 			var pw2 = document.getElementById("confirmpwd").value
 
 			if(pw1 !== pw2){
-				event.preventDefault()
-				alert("Passwords didn't match")
+				alert("Passwords didn't match");
+				return false;
 			}
-		}
+			window.setTimeout(function() {
+					$("#success-alert").fadeTo(1000, 500).slideUp(500, function() {
+			$("#success-alert").slideUp(500);
+					});
+			}, 500);
+
+window.setTimeout(function() {
+window.location.href = 'index.html';
+}, 2000);
+}
 		</script>
 
 		<title>Registration</title>
 	</head>
 <body>
-	<form action="index.html" onsubmit="if(!document.getElementById('checkterm').checked) { alert('Please agree to the Terms and Conditions.');return false; } matchPassword()">
+	<form onsubmit="alertsuccess()">
 	<div class="Registration">
 		<h2>Registration</h2>
 		<div class="form-group">
@@ -58,7 +84,15 @@
 
 		<button type="submit" class="btn btn-default" id="submit2">Submit</button>
 
-		<button type="reset" class="btn btn-default">Clear</button>
+		<button type="reset" class="btn btn-default" onclick="alertdanger()">Clear</button>
+		<div class="alert alert-success" role="alert"  id="success-alert">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  <strong>Success!</strong> You have been logged in successfully!
+	</div>
+	<div class="alert alert-danger" role="alert"  id="danger-alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<strong>Successfully cleared!</strong>
+</div>
 	</div>
 </div>
 </form>
