@@ -5,31 +5,108 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-		<!-- Bootstrap CDN-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+		<!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+		<script>
+		$(document).ready(function() {
+  $("#success-alert").hide();
+});
+		function alertsuccess() {
+			event.preventDefault();
+			window.setTimeout(function() {
+					$(".alert").fadeTo(1000, 500).slideUp(500, function() {
+      $("#success-alert").slideUp(500);
+					});
+			}, 500);
+
+window.setTimeout(function() {
+window.location.href = 'index.html';
+}, 2000);
+}
+
+function yousure(){
+  var r = confirm("You have selected "+document.getElementById("list").value+" with quantity: "+document.getElementById("quantity").value+"\n\nAre you sure?");
+  if (r == true) {
+    alertsuccess();
+  } else {
+    event.preventDefault();
+  }
+}
+		</script>
 		<title>Buy</title>
 	</head>
 <body>
-	<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-    	<img class="navbar-brand" src="logo.svg">
-      
+	  <!-- Nav-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <a class="navbar-brand" href="index.html">
+    <img src="logo.svg" alt="logo" style="width:40px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="ourproduct.html">Our Product</a>
+      <a class="nav-item nav-link" href="search.html">Search Product</a>
+      <a class="nav-item nav-link active" href="buy.html">Buy</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="ourproduct.html">Our Product</a></li>
-      <li><a href="search.html">Search Product</a></li>
-      <li class="active"><a href="buy.html">Buy</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="registration.html"><span class="glyphicon glyphicon-user"></span> Registration</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
+      <ul class="navbar-nav ml-auto">
+      <a class="nav-item nav-link" href="login.html"><span class="fas fa-sign-in-alt"></span> Log In</a>
+      <a class="nav-item nav-link" href="registration.html"><span class="fas fa-user"></span> Registeration</a>
+  </ul>
   </div>
 </nav>
+
+<form  onsubmit="yousure()">
+<div class="Buy">
+	<h2>Buy</h2>
+	<div class="form-group">
+		<label for="list">Name of product:</label>
+		<input class="form-control" id="list" name="list" required list="products-list">
+		<datalist id="products-list">
+	<option>Samsung Galaxy Note 20</option>
+	<option id="2">iPhone 12 Pro</option>
+	<option>Oppo X3</option>
+	<option>iPad Air 4</option>
+	<option>Huawei P30 Pro</option>
+	<option>Samsung Galaxy S20</option>
+	<option>iPhone 11</option>
+	<option>Huawei nova 3</option>
+	<option>Google Pixel 5</option>
+	<option>iPhone XR</option>
+</datalist>
+
+<div class="form-check">
+		<label class="form-check-label" for="payment1">
+			<input type="radio" class="form-check-input" id="payment1" name="optradio" value="payment 1" checked>Cash
+		</label>
+	</div>
+	<div class="form-check">
+			<label class="form-check-label" for="payment2">
+				<input type="radio" class="form-check-input" id="payment2" name="optradio" value="payment 2">Credit Card
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="quantity">Quantity:</label>
+			<input type="number" class="form-control" id="quantity" name="quantity" min="1"  required>
+		</div>
+		<div class="form-group">
+  <label for="textarea">Type your notes:</label>
+  <textarea class="form-control rounded-0" id="textarea" rows="3"></textarea>
+</div>
+	<button type="submit" class="btn btn-primary" id="sub1">Submit</button>
+	<div class="alert alert-success" role="alert"  id="success-alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Success!</strong> You have been purchased successfully!
+</div>
+</div>
+</div>
+</form>
 </body>
 </html>
