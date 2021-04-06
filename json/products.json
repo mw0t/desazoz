@@ -1,42 +1,42 @@
 [{
-	"title": "Samsung Galaxy Note 20",
-	"description": "A phone from Samsung",
-	"price": "3549"
+	"title": "Samsung Galaxy S21 5G",
+	"description": "A phone from Samsung that has 12GB RAM with 128GB Storage.",
+	"price": "939$"
 },{
-	"title": "iPhone 12 Pro",
-	"description": "A phone from Apple",
-	"price": "4399"
+	"title": "OnePlus 8 Pro",
+	"description": "A phone from OnePlus that has 12GB RAM with 256GB Storage.",
+	"price": "789$"
 },{
-	"title": "Oppo X3",
-	"description": "A phone from Oppo",
-	"price": "2299"
+	"title": "Huawei Y9s",
+	"description": "A phone from Huawei that has 6GB RAM with 128GB Storage.",
+	"price": "309$"
 },{
-	"title": "iPad Air 4",
-	"description": "A tablet from Apple",
-	"price": "2549"
+	"title": "iPhone 11 Pro Max",
+	"description": "A phone from Apple that has 6GB RAM with 256GB Storage.",
+	"price": "1299$"
 },{
-	"title": "Huawei P30 Pro",
-	"description": "A phone from Huawei",
-	"price": "3199"
+	"title": "Realme 7",
+	"description": "A phone from Realme that has 8GB RAM with 128GB Storage.",
+	"price": "299$"
 },{
-	"title": "Samsung Galaxy S20",
-	"description": "A phone from Samsung",
-	"price": "3399"
+	"title": "Samsung Galaxy S20 Ultra",
+	"description": "A phone from Samsung that has 12GB with 128GB Storage",
+	"price": "899$"
 
 },{
-	"title": "iPhone 11",
-	"description": "A phone from Apple",
-	"price": "3399"
+	"title": "iPhone 12",
+	"description": "A phone from Apple that has 6GB RAM with 128GB Storage.",
+	"price": "999$"
 },{
-	"title": "Huawei nova 3",
-	"description": "A phone from Huawei",
-	"price": "1799"
+	"title": "Samsung Galaxy Note 10",
+	"description": "A phone from Samsung that has 8GB RAM with 256GB Storage.",
+	"price": "599$"
 },{
 	"title": "Google Pixel 5",
-	"description": "A phone from Google",
-	"price": "2499"
+	"description": "A phone from Google that has 8GB RAM with 128GB Storage.",
+	"price": "899$"
 },{
 	"title": "iPhone XR",
-	"description": "A phone from Apple",
-	"price": "2999"
+	"description": "A phone from Apple that has 6GB RAM with 64GB Storage.",
+	"price": "599$"
 }]

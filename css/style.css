@@ -4,13 +4,15 @@
 
 .col{
   padding: 5px;
-  text-align: left;
+  text-align: center;
   color: white;
-  border: solid 1px #fffff;
+  border: solid 1px #ffffff;
   cursor: pointer;
   background-color: #212121;
 }
-
+.col-lg-2{
+  cursor: auto;
+}
 .col-md{
   padding: 5px;
   text-align: left;
@@ -29,7 +31,7 @@
 }
 
 #formlogin{
-  background-image: url(https://i.ibb.co/qkN5kM2/black.jpg);
+  background-image: url(https://i.ibb.co/Fg5Vgbd/black.jpg);
 }
 
 
